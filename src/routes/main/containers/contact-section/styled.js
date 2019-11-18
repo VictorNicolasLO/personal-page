@@ -3,6 +3,6 @@ import { Row } from 'react-flexbox-grid';
 
 export const Container = styled(Row)`
   & > * {
-    margin: 20px 0;
+    margin: 10px 0;
   }
 `;

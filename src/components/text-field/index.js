@@ -1,10 +1,16 @@
 import React from 'react';
-import { TextFieldContainer, InputText } from './styled';
+import {
+  TextFieldContainer,
+  InputText,
+  LabelContainer,
+  InputArea,
+} from './styled';
 
-function TextField() {
+function TextField({ label, multiline }) {
   return (
     <TextFieldContainer>
-      <InputText />
+      <LabelContainer>{label}</LabelContainer>
+      {multiline ? <InputArea /> : <InputText />}
     </TextFieldContainer>
   );
 }
