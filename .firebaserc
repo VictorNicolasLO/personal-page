@@ -6,7 +6,7 @@
     "personal-6e47f": {
       "hosting": {
         "development": [
-          "sigepin-development"
+          "personal-development"
         ],
         "production": [
           "personal-6e47f"
