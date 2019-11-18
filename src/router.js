@@ -6,7 +6,7 @@ function MainRouter() {
   return (
     <Switch>
       <Route path="/" component={Main} />
-      <Route path="/playground" component={Playground} />
+      <Route path="/playgroundd" component={Playground} />
     </Switch>
   );
 }
