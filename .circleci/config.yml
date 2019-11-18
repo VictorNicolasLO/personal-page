@@ -1,0 +1,49 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: "sudo npm install -g npm@latest"
+      - run:
+          name: install packages
+          command: "npm install"
+      - run:
+          name: build
+          command: "npm run build"
+      - save_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ./build
+  deploy_development:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - restore_cache: # Restores the cached dependency.
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: install firebase tools
+          command: "sudo npm install -g firebase-tools"
+      - run:
+          name: deploy
+          command: "firebase deploy --only hosting:development --token --non-interactive --token $FIREBASE_DEPLOY_KEY"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - development
+                - master
+      - deploy_development:
+          requires:
+            - build
+          filters:
+            branches:
+              only: development

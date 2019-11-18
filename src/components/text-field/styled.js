@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TextFieldContainer = styled.div`
   width: 100%;
   max-width: 700px;
-  min-width: 700px;
+
   margin: auto;
 `;
 export const InputText = styled.input`

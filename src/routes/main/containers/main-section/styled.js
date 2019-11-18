@@ -1,10 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Col, Row } from 'react-flexbox-grid';
+
+const showLine = keyframes`
+  from{
+    opacity:0;
+    transform: scaleX(0);
+  }
+  to{
+    opacity:1;
+    transform: scaleX(1);
+  }
+`;
 
 export const Container = styled(Row)`
   z-index: 900;
   & > * {
-    margin: 15px 0;
+    margin: 12px 0;
   }
 `;
 
@@ -22,6 +33,7 @@ export const Line = styled.div`
   width: 100%;
   height: 2px;
   background: white;
+  animation: ${showLine} 0.5s;
 `;
 
 export const SocialContainers = styled(Col)`

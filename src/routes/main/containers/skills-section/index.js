@@ -5,52 +5,55 @@ import { Col } from 'react-flexbox-grid';
 import Typography from '../../../../components/typography';
 import SkillItem from '../../../../components/skill-item';
 import { SkillsLanguages, SkillsFrameworks, SkillsDevops } from './const';
+import ReactAnimateScroll from 'react-animate-on-scroll';
 
 function SkillsSection() {
   return (
     <Section
       type="primary"
       style={{ alignItems: 'flex-start', height: 'fit-content' }}>
-      <Container center="xs">
-        <Col xs={12}>
-          <Typography
-            color="white"
-            variant="h2"
-            style={{ 'letter-spacing': '5.7px' }}>
-            Skills
-          </Typography>
-        </Col>
-        <Col xs={12}>
-          <Typography color="white" variant="h3">
-            Languages
-          </Typography>
-        </Col>
-        {SkillsLanguages.map((item) => (
-          <Col md xs>
-            <SkillItem {...item} />
+      <ReactAnimateScroll animateOnce animateIn="fadeIn">
+        <Container center="xs">
+          <Col xs={12}>
+            <Typography
+              color="white"
+              variant="h2"
+              style={{ 'letter-spacing': '5.7px' }}>
+              Skills
+            </Typography>
           </Col>
-        ))}
-        <Col xs={12}>
-          <Typography color="white" variant="h3">
-            Frameworks
-          </Typography>
-        </Col>
-        {SkillsFrameworks.map((item) => (
-          <Col md xs>
-            <SkillItem {...item} />
+          <Col xs={12}>
+            <Typography color="white" variant="h3">
+              Languages
+            </Typography>
           </Col>
-        ))}
-        <Col xs={12}>
-          <Typography color="white" variant="h3">
-            Devops
-          </Typography>
-        </Col>
-        {SkillsDevops.map((item) => (
-          <Col md xs>
-            <SkillItem {...item} />
+          {SkillsLanguages.map((item) => (
+            <Col md xs>
+              <SkillItem {...item} />
+            </Col>
+          ))}
+          <Col xs={12}>
+            <Typography color="white" variant="h3">
+              Frameworks
+            </Typography>
           </Col>
-        ))}
-      </Container>
+          {SkillsFrameworks.map((item) => (
+            <Col md xs>
+              <SkillItem {...item} />
+            </Col>
+          ))}
+          <Col xs={12}>
+            <Typography color="white" variant="h3">
+              Devops
+            </Typography>
+          </Col>
+          {SkillsDevops.map((item) => (
+            <Col md xs>
+              <SkillItem {...item} />
+            </Col>
+          ))}
+        </Container>
+      </ReactAnimateScroll>
     </Section>
   );
 }

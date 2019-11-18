@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "personal-6e47f"
+  },
+  "targets": {
+    "personal-6e47f": {
+      "hosting": {
+        "development": [
+          "sigepin-development"
+        ],
+        "production": [
+          "personal-6e47f"
+        ]
+      }
+    }
+  }
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import Section from '../../../../components/section';
-import { Container } from './styled';
+import { Container, CustomButton } from './styled';
 import Typography from '../../../../components/typography';
-import { Col, Row } from 'react-flexbox-grid';
+import { Col } from 'react-flexbox-grid';
 import TextField from '../../../../components/text-field';
-import Button from '../../../../components/button';
 
 function ContactSection() {
   return (
-    <Section type="secondary">
+    <Section className="contact" type="secondary">
       <Container center="xs">
         <Col xs={12}>
           <Typography variant="h2" style={{ 'letter-spacing': '5.7px' }}>
@@ -18,7 +17,7 @@ function ContactSection() {
             Send me a message
           </Typography>
           <Typography variant="body1">
-            and I will contact you as soon is posible.
+            and I will contact you as soon as possible.
           </Typography>
         </Col>
         <Col xs={12}>
@@ -31,14 +30,7 @@ function ContactSection() {
           <TextField multiline label={'Text'} />
         </Col>
         <Col xs={12}>
-          <Button
-            style={{
-              marginLeft: '480px',
-            }}
-            color="secondary"
-            size="medium"
-            label="Send message"
-          />
+          <CustomButton color="secondary" size="medium" label="Send message" />
         </Col>
       </Container>
     </Section>
