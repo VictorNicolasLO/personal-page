@@ -19,7 +19,7 @@ const SectionContainer = styled.section`
     padding-top: 0;
   }
 `;
-
+const a = '';
 function Section({ style, className, type, children }) {
   return (
     <SectionContainer
