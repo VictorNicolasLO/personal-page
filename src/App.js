@@ -4,6 +4,7 @@ import { ThemeCtxProvider } from './ctx/theme.ctx';
 import { Router } from 'react-router-dom';
 import * as History from 'history';
 import MainRouter from './router';
+import { AppStatusProvider } from './ctx/app-status.ctx';
 const history = History.createBrowserHistory();
 function App() {
   const themeProps = {
@@ -14,11 +15,13 @@ function App() {
   };
 
   return (
-    <ThemeCtxProvider {...themeProps}>
-      <Router history={history}>
-        <MainRouter />
-      </Router>
-    </ThemeCtxProvider>
+    <AppStatusProvider>
+      <ThemeCtxProvider {...themeProps}>
+        <Router history={history}>
+          <MainRouter />
+        </Router>
+      </ThemeCtxProvider>
+    </AppStatusProvider>
   );
 }
 

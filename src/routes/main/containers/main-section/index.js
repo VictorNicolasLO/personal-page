@@ -23,9 +23,9 @@ function MainSection() {
         position: 'relative',
         background: `url("${MainBackground}")`,
         backgroundSize: 'auto',
-        'background-repeat': 'no-repeat',
+        backgroundRepeat: 'no-repeat',
 
-        'background-attachment': 'fixed',
+        backgroundAttachment: 'fixed',
       }}>
       <BackDrop />
       <Container center="xs">
@@ -71,7 +71,7 @@ function MainSection() {
             smooth={true}
             duration={900}>
             <Button
-              style={{ marginTop: '100px', width: '300px' }}
+              style={{ marginTop: '100px' }}
               label="Hire me"
               size="large"
               color="primary"

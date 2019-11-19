@@ -7,8 +7,8 @@ function TimeLine({ events }) {
       <VerticalLine />
       <TopDot />
       <BottomDot />
-      {events.map((item) => (
-        <Event {...item} />
+      {events.map((item, key) => (
+        <Event {...item} key={key} />
       ))}
     </TimeLineContainer>
   );

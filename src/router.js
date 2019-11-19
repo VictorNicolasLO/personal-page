@@ -4,10 +4,12 @@ import Playground from './routes/playground';
 import Main from './routes/main';
 function MainRouter() {
   return (
-    <Switch>
-      <Route path="/" component={Main} />
-      <Route path="/playgroundd" component={Playground} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path="/" component={Main} />
+        <Route path="/playgroundd" component={Playground} />
+      </Switch>
+    </>
   );
 }
 

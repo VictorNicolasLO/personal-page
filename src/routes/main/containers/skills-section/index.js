@@ -18,7 +18,7 @@ function SkillsSection() {
             <Typography
               color="white"
               variant="h2"
-              style={{ 'letter-spacing': '5.7px' }}>
+              style={{ letterSpacing: '5.7px' }}>
               Skills
             </Typography>
           </Col>
@@ -27,8 +27,8 @@ function SkillsSection() {
               Languages
             </Typography>
           </Col>
-          {SkillsLanguages.map((item) => (
-            <Col md xs>
+          {SkillsLanguages.map((item, index) => (
+            <Col md xs key={index}>
               <SkillItem {...item} />
             </Col>
           ))}
@@ -37,8 +37,8 @@ function SkillsSection() {
               Frameworks
             </Typography>
           </Col>
-          {SkillsFrameworks.map((item) => (
-            <Col md xs>
+          {SkillsFrameworks.map((item, index) => (
+            <Col md xs key={index}>
               <SkillItem {...item} />
             </Col>
           ))}
@@ -47,8 +47,8 @@ function SkillsSection() {
               Devops
             </Typography>
           </Col>
-          {SkillsDevops.map((item) => (
-            <Col md xs>
+          {SkillsDevops.map((item, index) => (
+            <Col md xs key={index}>
               <SkillItem {...item} />
             </Col>
           ))}

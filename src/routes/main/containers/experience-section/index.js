@@ -14,7 +14,7 @@ function ExperienceSection() {
           <Typography
             color="#262626"
             variant="h2"
-            style={{ 'letter-spacing': '5.7px' }}>
+            style={{ letterSpacing: '5.7px' }}>
             Work experience
           </Typography>
         </Col>

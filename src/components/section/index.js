@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMax } from '../../utils/devices';
 
 const SectionContainer = styled.section`
   position: relative;
@@ -11,6 +12,12 @@ const SectionContainer = styled.section`
   align-items: center;
   padding: 50px;
   box-sizing: border-box;
+  @media ${deviceMax.mobileS} {
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    padding-top: 0;
+  }
 `;
 
 function Section({ style, className, type, children }) {

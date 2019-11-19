@@ -10,7 +10,7 @@ function ContactSection() {
     <Section className="contact" type="secondary">
       <Container center="xs">
         <Col xs={12}>
-          <Typography variant="h2" style={{ 'letter-spacing': '5.7px' }}>
+          <Typography variant="h2" style={{ letterSpacing: '5.7px' }}>
             Contact
           </Typography>
           <Typography style={{ marginTop: '5px' }} variant="h3">

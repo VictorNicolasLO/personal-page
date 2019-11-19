@@ -13,7 +13,6 @@ function Typography({ variant, children, className, style, color }) {
       fontWeight: 'regular',
     },
   };
-  console.log(style);
   return (
     <div
       style={{
