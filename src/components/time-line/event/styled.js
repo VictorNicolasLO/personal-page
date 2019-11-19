@@ -1,14 +1,32 @@
 import styled from 'styled-components';
+import { deviceMax } from '../../../utils/devices';
 export const EventContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+  & > * {
+    margin: 0 15px;
+  }
   &:nth-child(odd) {
     flex-direction: row-reverse;
     & > .date-container {
       text-align: right;
+    }
+  }
+  @media ${deviceMax.mobileL} {
+    margin-top: 50px;
+    flex-direction: column-reverse;
+    & > .date-container {
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
+      & > .date-container {
+        text-align: left;
+      }
     }
   }
 `;

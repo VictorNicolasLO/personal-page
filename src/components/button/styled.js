@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const sizeOptions = {
-  large: `padding:25px 100px; font-size:1.5em;   font-weight: 100;`,
+  large: `padding:20px 100px; font-size:1.5em;   font-weight: 100;`,
   medium: `padding:15px 50px; font-size:1em;   font-weight: 100;`,
 };
 

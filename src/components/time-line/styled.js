@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { deviceMax } from '../../utils/devices';
 export const TimeLineContainer = styled.div`
   position: relative;
   max-width: 700px;
@@ -16,6 +17,9 @@ export const VerticalLine = styled.div`
   bottom: 0;
   top: 0;
   margin: auto;
+  @media ${deviceMax.mobileL} {
+    opacity: 0;
+  }
 `;
 
 const Dot = styled.div`
