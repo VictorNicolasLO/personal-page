@@ -8,7 +8,7 @@ import { Container } from './styled';
 
 function ExperienceSection() {
   return (
-    <Section style={{ alignItems: 'flex-start', height: 'fit-content' }}>
+    <Section>
       <Container center="xs">
         <Col xs={12}>
           <Typography

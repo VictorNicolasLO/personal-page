@@ -5,21 +5,22 @@ import { deviceMax } from '../../utils/devices';
 const SectionContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 700px;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
   box-sizing: border-box;
-  @media ${deviceMax.mobileS} {
+
+  /*@media ${deviceMax.mobileS} {
     justify-content: center;
     align-items: flex-start;
     height: fit-content;
     padding-top: 0;
-  }
+  }*/
 `;
-const a = '';
+
 function Section({ style, className, type, children }) {
   return (
     <SectionContainer

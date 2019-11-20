@@ -12,7 +12,6 @@ function Main() {
       <ReactAnimateScroll animateOnce animateIn="fadeInUp">
         <ExperienceSection />
       </ReactAnimateScroll>
-
       <SkillsSection />
       <ReactAnimateScroll animateOnce animateIn="fadeIn">
         <ContactSection />

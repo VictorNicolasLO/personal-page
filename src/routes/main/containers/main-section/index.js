@@ -38,7 +38,7 @@ function MainSection() {
         <Col xs={12}>
           <AnimationBottomToUp time={0.5} delay={0.6}>
             <Typography color="white" variant="h1">
-              Victor Nicolas Lizarraga Ochoa
+              Víctor Nicolás
             </Typography>
           </AnimationBottomToUp>
 

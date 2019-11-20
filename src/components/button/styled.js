@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const sizeOptions = {
-  large: `padding:20px 100px; font-size:1.5em;   font-weight: 100;`,
+  large: `padding:20px 50px; font-size:1.5em;   font-weight: 100;`,
   medium: `padding:15px 50px; font-size:1em;   font-weight: 100;`,
 };
 
@@ -12,7 +12,7 @@ const colorOptions = (primary, secondary) => ({
 
 export const ButtonContainer = styled.div`
   box-shadow: 0px 3px 6px #00000029;
-  border-radius: 40px;
+  border-radius: 50px;
   display: inline-block;
   text-align: center;
   align-items: center;

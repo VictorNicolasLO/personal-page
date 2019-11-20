@@ -9,9 +9,7 @@ import ReactAnimateScroll from 'react-animate-on-scroll';
 
 function SkillsSection() {
   return (
-    <Section
-      type="primary"
-      style={{ alignItems: 'flex-start', height: 'fit-content' }}>
+    <Section type="primary">
       <ReactAnimateScroll animateOnce animateIn="fadeIn">
         <Container center="xs">
           <Col xs={12}>
