@@ -55,10 +55,16 @@ function MainSection() {
           <AnimationOpacity time={0.3} delay={0.9}>
             <Row center="xs">
               <SocialContainers>
-                <SocialediaButton src={githubLogo} />
+                <SocialediaButton
+                  href={'https://github.com/VictorNicolasLO'}
+                  src={githubLogo}
+                />
               </SocialContainers>
               <SocialContainers>
-                <SocialediaButton src={linkedinLogo} />
+                <SocialediaButton
+                  hre="https://www.linkedin.com/in/victor-nicolas-lizarraga-ochoa-4949b1144/"
+                  src={linkedinLogo}
+                />
               </SocialContainers>
             </Row>
           </AnimationOpacity>

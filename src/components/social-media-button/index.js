@@ -1,10 +1,12 @@
 import React from 'react';
 import { SocialediaButtonContainer } from './styled';
 
-function SocialediaButton({ src }) {
+function SocialediaButton({ src, href }) {
   return (
     <SocialediaButtonContainer>
-      <img width="50" src={src} alt="Profile" />
+      <a href={href}>
+        <img width="50" src={src} alt="Profile" />
+      </a>
     </SocialediaButtonContainer>
   );
 }
