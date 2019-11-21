@@ -62,7 +62,7 @@ function MainSection() {
               </SocialContainers>
               <SocialContainers>
                 <SocialediaButton
-                  hre="https://www.linkedin.com/in/victor-nicolas-lizarraga-ochoa-4949b1144/"
+                  href="https://www.linkedin.com/in/victor-nicolas-lizarraga-ochoa-4949b1144/"
                   src={linkedinLogo}
                 />
               </SocialContainers>
