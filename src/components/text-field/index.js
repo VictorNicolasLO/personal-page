@@ -7,14 +7,14 @@ import {
   ErrorContainer,
 } from './styled';
 
-function TextField({ label, multiline, onInput, error }) {
+function TextField({ label, multiline, onInput, error, value }) {
   return (
     <TextFieldContainer>
       <LabelContainer>{label}</LabelContainer>
       {multiline ? (
-        <InputArea onInput={onInput} />
+        <InputArea value={value} onInput={onInput} />
       ) : (
-        <InputText onInput={onInput} />
+        <InputText value={value} onInput={onInput} />
       )}
       <ErrorContainer
         style={{

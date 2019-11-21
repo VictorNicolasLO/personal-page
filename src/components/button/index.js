@@ -31,7 +31,7 @@ function Button({
       secondaryColor={secondary}
       onClick={!disable ? onClick : () => {}}>
       {loading ? (
-        <AnimationScale time={0.5} delay={0.2}>
+        <AnimationScale time={0.5} delay={0.1}>
           <div>
             <BarLoader color={primary} />
           </div>

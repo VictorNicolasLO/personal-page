@@ -72,7 +72,7 @@ function MainSection() {
             duration={900}>
             <Button
               style={{ marginTop: '100px' }}
-              label="Hire me"
+              label="Let's talk!"
               size="large"
               color="primary"
             />

@@ -15,13 +15,19 @@ function useTextField(validation, errorMessage) {
     return newIsValid;
   }
 
+  function clear() {
+    setText('');
+  }
+
   return {
     input: {
       error,
       onInput,
+      value: text,
     },
     validate,
     text,
+    clear,
   };
 }
 

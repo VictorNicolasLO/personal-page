@@ -7,6 +7,7 @@ export function useContacts() {
 
   async function sendMessage(contactName, contactEmail, contactMessage) {
     setLoading(true);
+    console.log(contactName);
     await axios.post(
       'https://us-central1-personal-6e47f.cloudfunctions.net/sendEmail',
       {
@@ -18,6 +19,7 @@ export function useContacts() {
       },
     );
     setLoading(false);
+    setEmailSent(true);
   }
 
   return {

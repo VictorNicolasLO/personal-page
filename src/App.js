@@ -4,6 +4,7 @@ import { ThemeProvider } from './providers/theme.provider';
 import { Router } from 'react-router-dom';
 import * as History from 'history';
 import MainRouter from './router';
+import { AppStatusProvider } from './providers/app-status.provider';
 const history = History.createBrowserHistory();
 function App() {
   const themeProps = {
@@ -14,11 +15,13 @@ function App() {
   };
 
   return (
-    <ThemeProvider {...themeProps}>
-      <Router history={history}>
-        <MainRouter />
-      </Router>
-    </ThemeProvider>
+    <AppStatusProvider>
+      <ThemeProvider {...themeProps}>
+        <Router history={history}>
+          <MainRouter />
+        </Router>
+      </ThemeProvider>
+    </AppStatusProvider>
   );
 }
 

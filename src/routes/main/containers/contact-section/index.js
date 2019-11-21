@@ -6,10 +6,10 @@ import { Col } from 'react-flexbox-grid';
 import TextField from '../../../../components/text-field';
 import { useContactsProvider } from '../../providers/contact.provider';
 import useContactForm from './hooks/useContactForm';
-
+import NotificationMessage from '../../../../components/notification-message';
 function ContactSection() {
   const { emailInput, messageInput, nameInput, sendEmail } = useContactForm();
-  const { loading } = useContactsProvider();
+  const { loading, emailSent, setEmailSent } = useContactsProvider();
   return (
     <Section className="contact" type="secondary">
       <Container center="xs">
@@ -43,6 +43,14 @@ function ContactSection() {
             onClick={sendEmail}
           />
         </Col>
+        <NotificationMessage
+          message={'Great! now just wait a little I will contact you shortly!'}
+          open={emailSent}
+          closeTime={8}
+          onClose={() => {
+            setEmailSent(false);
+          }}
+        />
       </Container>
     </Section>
   );
