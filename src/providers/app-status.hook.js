@@ -22,7 +22,7 @@ function useAppStatus() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  alert(ready);
+
   return {
     ready,
   };
