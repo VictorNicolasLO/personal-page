@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import useTextField from '../../../../../components/text-field/hooks/usetTextField';
 import { useContactsProvider } from '../../../providers/contact.provider';
 
