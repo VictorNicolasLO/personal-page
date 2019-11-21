@@ -31,13 +31,13 @@ function Button({
       secondaryColor={secondary}
       onClick={!disable ? onClick : () => {}}>
       {loading ? (
-        <AnimationScale time={0.5} delay={0.6}>
+        <AnimationScale time={0.5} delay={0.2}>
           <div>
             <BarLoader color={primary} />
           </div>
         </AnimationScale>
       ) : (
-        label
+        <div>{label}</div>
       )}
     </ButtonContainer>
   );
