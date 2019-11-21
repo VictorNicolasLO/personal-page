@@ -4,8 +4,12 @@ import { Container, CustomButton } from './styled';
 import Typography from '../../../../components/typography';
 import { Col } from 'react-flexbox-grid';
 import TextField from '../../../../components/text-field';
+import { useContactsProvider } from '../../providers/contact.provider';
+import useContactForm from './hooks/useContactForm';
 
 function ContactSection() {
+  const { emailInput, messageInput, nameInput, sendEmail } = useContactForm();
+  const { loading } = useContactsProvider();
   return (
     <Section className="contact" type="secondary">
       <Container center="xs">
@@ -21,16 +25,23 @@ function ContactSection() {
           </Typography>
         </Col>
         <Col xs={12}>
-          <TextField label={'Name'} />
+          <TextField label={'Name'} {...nameInput} />
         </Col>
         <Col xs={12}>
-          <TextField label={'Email'} />
+          <TextField label={'Email'} {...emailInput} />
         </Col>
         <Col xs={12}>
-          <TextField multiline label={'Text'} />
+          <TextField multiline label={'Message'} {...messageInput} />
         </Col>
         <Col xs={12}>
-          <CustomButton color="secondary" size="medium" label="Send message" />
+          <CustomButton
+            loading={loading}
+            disable={loading}
+            color="secondary"
+            size="medium"
+            label="Send message"
+            onClick={sendEmail}
+          />
         </Col>
       </Container>
     </Section>

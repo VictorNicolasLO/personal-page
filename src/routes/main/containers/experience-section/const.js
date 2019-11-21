@@ -2,7 +2,7 @@ import React from 'react';
 export const events = [
   {
     date: 'May 2017 - Jul 2018',
-    title: 'Full stack developer',
+    title: 'Full stack developer in a software company',
     text: (
       <div>
         Creating web applications with Angularjs and Angular 4
@@ -21,7 +21,7 @@ export const events = [
   },
   {
     date: 'Jul 2018 - Feb 2019',
-    title: 'Full stack developer',
+    title: 'Full stack developer in a financial findustry company',
     text: (
       <div>
         Creating Web applications using React js with redux.
@@ -40,7 +40,7 @@ export const events = [
   },
   {
     date: 'Dec 2018 - Sep 2019',
-    title: 'Full stack developer',
+    title: 'Full stack developer in government innovation department',
     text: (
       <div>
         Creating Web applications using React js with redux and mobx

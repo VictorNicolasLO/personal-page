@@ -1,11 +1,25 @@
 import React from 'react';
-import { ButtonContainer } from './styled';
-import { useThemeCtx } from '../../ctx/theme.ctx';
+import { AnimationScale } from '../animations';
 
-function Button({ color, onClick, size, label, style, className }) {
+import { ButtonContainer } from './styled';
+import { useThemeProvider } from '../../providers/theme.provider';
+
+import { BarLoader } from 'react-spinners';
+
+function Button({
+  color,
+  onClick,
+  size,
+  label,
+  style,
+  className,
+  loading,
+  disable,
+}) {
   const {
     color: { primary, secondary },
-  } = useThemeCtx();
+  } = useThemeProvider();
+
   return (
     <ButtonContainer
       style={style}
@@ -15,8 +29,16 @@ function Button({ color, onClick, size, label, style, className }) {
       color={color}
       primaryColor={primary}
       secondaryColor={secondary}
-      onClick={onClick}>
-      {label}
+      onClick={!disable ? onClick : () => {}}>
+      {loading ? (
+        <AnimationScale time={0.5} delay={0.6}>
+          <div>
+            <BarLoader color={primary} />
+          </div>
+        </AnimationScale>
+      ) : (
+        label
+      )}
     </ButtonContainer>
   );
 }

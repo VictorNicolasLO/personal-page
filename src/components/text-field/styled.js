@@ -22,6 +22,13 @@ export const InputText = styled.input`
   }
 `;
 
+export const ErrorContainer = styled.div`
+  color: red;
+  text-align: left;
+
+  transition: 0.2s;
+`;
+
 export const InputArea = styled.textarea`
   outline: none;
   -webkit-appearance: none;
