@@ -3,6 +3,8 @@ import { useAppStatus } from './app-status.hook';
 
 const appStatusContext = createContext({
   ready: false,
+  profileImageReady: false,
+  backgroundImageReady: false,
 });
 
 function AppStatusProvider({ children }) {

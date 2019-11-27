@@ -15,16 +15,18 @@ import {
   AnimationBottomToUp,
   AnimationOpacity,
 } from '../../../../components/animations';
+import { useAppStatusProvider } from '../../../../providers/app-status.provider';
 function MainSection() {
+  const { backgroundImageReady } = useAppStatusProvider();
   return (
     <Section
       type="primary"
       style={{
         position: 'relative',
-        background: `url("${MainBackground}")`,
+        background: backgroundImageReady ? `url("${MainBackground}")` : '',
+        transition: '1s',
         backgroundSize: 'auto',
         backgroundRepeat: 'no-repeat',
-
         backgroundAttachment: 'fixed',
       }}>
       <BackDrop />
