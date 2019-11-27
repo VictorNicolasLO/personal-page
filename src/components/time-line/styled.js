@@ -28,6 +28,9 @@ const Dot = styled.div`
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 50%;
+  @media ${deviceMax.mobileL} {
+    opacity: 0;
+  }
 `;
 
 export const TopDot = styled(Dot)`
