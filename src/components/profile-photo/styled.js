@@ -16,6 +16,10 @@ export const ProfilePhotoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  & > img {
+    border-radius: 50%;
+    filter: grayscale(10%);
+  }
 `;
 
 export const ImgLoader = styled.div`

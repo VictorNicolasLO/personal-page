@@ -2,30 +2,28 @@ import React from 'react';
 import Section from '../../../../components/section';
 import { Col, Row } from 'react-flexbox-grid';
 import ProfilePhoto from '../../../../components/profile-photo';
-import ProfilePhotoIMG from '../../../../assets/images/profile.png';
+import ProfilePhotoIMG from '../../../../assets/images/profile.jpeg';
 import Typography from '../../../../components/typography';
 import SocialediaButton from '../../../../components/social-media-button';
 import linkedinLogo from '../../../../assets/images/linkedin-logo.png';
 import githubLogo from '../../../../assets/images/github-logo.png';
 import { Line, SocialContainers, Container, BackDrop } from './styled';
 import Button from '../../../../components/button';
-import MainBackground from '../../../../assets/all-images/landscape-in-mountains.png';
+import MainBackground from '../../../../assets/all-images/landscape-in-mountains-1365333.png';
 import { Link } from 'react-scroll';
 import {
   AnimationBottomToUp,
   AnimationOpacity,
 } from '../../../../components/animations';
-import { useAppStatusProvider } from '../../../../providers/app-status.provider';
 function MainSection() {
-  const { backgroundImageReady } = useAppStatusProvider();
   return (
     <Section
       type="primary"
       style={{
         position: 'relative',
-        background: backgroundImageReady ? `url("${MainBackground}")` : '',
+        background: `url("${MainBackground}") no-repeat fixed center`,
         transition: '1s',
-        backgroundSize: 'auto',
+        backgroundSize: '120%',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}>

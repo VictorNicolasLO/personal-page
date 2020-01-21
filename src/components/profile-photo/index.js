@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ProfilePhotoContainer, ImgLoader } from './styled';
+import { ProfilePhotoContainer } from './styled';
 
 function ProfilePhoto({ src }) {
   const [imgReady, setImgReady] = useState(false);
@@ -16,11 +16,7 @@ function ProfilePhoto({ src }) {
 
   return (
     <ProfilePhotoContainer>
-      {imgReady ? (
-        <img width="200" src={src} alt="Profile" />
-      ) : (
-        <ImgLoader></ImgLoader>
-      )}
+      {imgReady ? <img width="200" src={src} alt="Profile" /> : null}
     </ProfilePhotoContainer>
   );
 }
