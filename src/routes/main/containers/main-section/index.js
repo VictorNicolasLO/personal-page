@@ -23,7 +23,7 @@ function MainSection() {
         position: 'relative',
         background: `url("${MainBackground}") no-repeat fixed center`,
         transition: '1s',
-        backgroundSize: '120%',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}>
