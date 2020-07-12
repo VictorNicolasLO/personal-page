@@ -26,7 +26,7 @@ function ExperienceSection() {
               textAlign: 'left',
             }}>
 Full stack web developer who can develop for frontend, backend with microservices patterns and mobile using the best technologies and the best architecture for your application.</Typography>
-          </Typography>
+          
         </Col>
         <Col xs={12}>
           <TimeLine events={events} />
