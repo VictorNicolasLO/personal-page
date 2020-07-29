@@ -11,7 +11,7 @@ function SkillItem({ src, title }) {
           height: '180px',
           background: `url("${src}")`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
         alt="skill"
