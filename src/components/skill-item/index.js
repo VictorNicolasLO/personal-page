@@ -10,8 +10,8 @@ function SkillItem({ src, title }) {
           width: '180px',
           height: '180px',
           background: `url("${src}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'contain',
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
         alt="skill"
