@@ -62,9 +62,6 @@ export const events = [
       <div>
         Participating in an streaming web application development
         <br />
-        <br />
-        Developing <br />
-        <br />
         Creating Backend services using Domain Driven Design <br />
         <br />
         Contributing to a large React application
