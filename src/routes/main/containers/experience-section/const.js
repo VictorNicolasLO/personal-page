@@ -56,7 +56,7 @@ export const events = [
     ),
   },
   {
-    date: "Dec 2020 - Present",
+    date: "March 2020 - Present",
     title: "Full stack developer in Alio IT solutions",
     text: (
       <div>
