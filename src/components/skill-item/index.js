@@ -1,25 +1,26 @@
-import React from 'react';
-import { SkillItemContainer, Overlay } from './styled';
-import Typography from '../typography';
+import React from "react";
+import { SkillItemContainer, Overlay } from "./styled";
+import Typography from "../typography";
 
-function SkillItem({ src, title }) {
+function SkillItem({ src, title, backgroundSize }) {
   return (
     <SkillItemContainer>
       <div
         style={{
-          width: '180px',
-          height: '180px',
+          width: "180px",
+          height: "180px",
           background: `url("${src}")`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: backgroundSize || "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
         alt="skill"
       />
       <Overlay>
         <Typography
-          style={{ fontWeight: 'bold', fontSize: '1.5em' }}
-          variant="body1">
+          style={{ fontWeight: "bold", fontSize: "1.5em" }}
+          variant="body1"
+        >
           {title}
         </Typography>
       </Overlay>

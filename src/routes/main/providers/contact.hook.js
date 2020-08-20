@@ -1,23 +1,20 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
+import { useFirestore } from "../../../providers/firestore-provider";
 
 export function useContacts() {
   const [loading, setLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
-
+  const firestore = useFirestore();
   async function sendMessage(contactName, contactEmail, contactMessage) {
     setLoading(true);
     console.log(contactName);
-    await axios.post(
-      'https://us-central1-personal-6e47f.cloudfunctions.net/sendEmail',
-      {
-        contact: {
-          name: contactName,
-          email: contactEmail,
-          message: contactMessage,
-        },
-      },
-    );
+    await firestore.collection("emails").add({
+      name: contactName,
+      email: contactEmail,
+      message: contactMessage,
+    });
+
     setLoading(false);
     setEmailSent(true);
   }

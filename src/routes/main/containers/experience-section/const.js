@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 export const events = [
   {
-    date: 'May 2017 - Jul 2018',
-    title: 'Full stack developer in a software company',
+    date: "May 2017 - Jul 2018",
+    title: "Full stack developer in a software company",
     text: (
       <div>
         Creating web applications with Angularjs and Angular 4
@@ -20,8 +20,8 @@ export const events = [
     ),
   },
   {
-    date: 'Jul 2018 - Feb 2019',
-    title: 'Full stack developer in a financial findustry company',
+    date: "Jul 2018 - Feb 2019",
+    title: "Full stack developer in a financial findustry company",
     text: (
       <div>
         Creating Web applications using React js with redux.
@@ -39,8 +39,8 @@ export const events = [
     ),
   },
   {
-    date: 'Dec 2018 - Sep 2019',
-    title: 'Full stack developer in government innovation department',
+    date: "Dec 2018 - Sep 2019",
+    title: "Full stack developer in government innovation department",
     text: (
       <div>
         Creating Web applications using React js with redux and mobx
@@ -52,6 +52,22 @@ export const events = [
         <br />
         Taking part in architecture decisions in frontend and backend Working
         with mongod
+      </div>
+    ),
+  },
+  {
+    date: "Dec 2020 - Present",
+    title: "Full stack developer in Alio IT solutions",
+    text: (
+      <div>
+        Participating in an streaming web application development
+        <br />
+        <br />
+        Developing <br />
+        <br />
+        Creating Backend services using Domain Driven Design <br />
+        <br />
+        Contributing to a large React application
       </div>
     ),
   },
