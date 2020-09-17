@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { Col, Row } from 'react-flexbox-grid';
+import styled, { keyframes } from "styled-components";
+import { Col, Row } from "react-flexbox-grid";
 
 const showLine = keyframes`
   from{
@@ -33,7 +33,11 @@ export const Line = styled.div`
   width: 100%;
   height: 2px;
   background: white;
-  animation: ${showLine} 0.5s;
+  opacity: 0;
+  animation: ${showLine} 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: 0.7s;
+
+  animation-fill-mode: forwards;
 `;
 
 export const SocialContainers = styled(Col)`

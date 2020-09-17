@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { EASE_OUT_CIRC } from "../../../routes/main/containers/experience-section/styled";
 import { deviceMax } from "../../../utils/devices";
-export const EventContainer = styled.div`
+import { createAnimationScrolleableComponent } from "../../animation";
+export const EventContainerBase = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,6 +32,23 @@ export const EventContainer = styled.div`
     }
   }
 `;
+
+export const EventContainer = createAnimationScrolleableComponent({
+  component: EventContainerBase,
+  easing: EASE_OUT_CIRC,
+  duration: 0.6,
+  keyframes: `
+  from{
+    opacity:0;
+    transform:translateY(50px) scale(.9);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+  `,
+});
+
 export const DateContainer = styled.div`
   letter-spacing: 0;
   color: black;

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { deviceMax } from '../../utils/devices';
+import styled from "styled-components";
+import { deviceMax } from "../../utils/devices";
+
 export const TimeLineContainer = styled.div`
   position: relative;
   max-width: 700px;
@@ -9,7 +10,7 @@ export const TimeLineContainer = styled.div`
 `;
 export const VerticalLine = styled.div`
   width: 2px;
-  heigh: 100%;
+  height: 100%;
   background: #8d8d8d;
   position: absolute;
   left: 0;

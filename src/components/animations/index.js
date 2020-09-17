@@ -1,9 +1,9 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const animationShow = keyframes`
 from{
   opacity:0;
-  transform:translateY(50px)
+  transform:translateY(100px)
 }
 to{
   opacity:1;
@@ -49,6 +49,10 @@ export const AnimationBottomToUp = styled.div`
   opacity: 0;
   animation: ${animationShow} ${({ time }) => time}s;
   animation-delay: ${({ delay }) => delay}s;
+  ${({ animationEasing }) =>
+    animationEasing || "linear"
+      ? `animation-timing-function: ${animationEasing || "linear"};`
+      : ""};
   animation-fill-mode: forwards;
 `;
 
@@ -56,6 +60,10 @@ export const AnimationTopToDown = styled.div`
   opacity: 0;
   animation: ${AnimationTopDown} ${({ time }) => time}s;
   animation-delay: ${({ delay }) => delay}s;
+  ${({ animationEasing }) =>
+    animationEasing || "linear"
+      ? `animation-timing-function: ${animationEasing || "linear"};`
+      : ""};
   animation-fill-mode: forwards;
 `;
 
@@ -63,6 +71,10 @@ export const AnimationOpacity = styled.div`
   opacity: 0;
   animation: ${animationOpacity} ${({ time }) => time}s;
   animation-delay: ${({ delay }) => delay}s;
+  ${({ animationEasing }) =>
+    animationEasing || "linear"
+      ? `animation-timing-function: ${animationEasing || "linear"};`
+      : ""};
   animation-fill-mode: forwards;
 `;
 
@@ -70,5 +82,9 @@ export const AnimationScale = styled.div`
   opacity: 0;
   animation: ${animationScale} ${({ time }) => time}s;
   animation-delay: ${({ delay }) => delay}s;
+  ${({ animationEasing }) =>
+    animationEasing || "linear"
+      ? `animation-timing-function: ${animationEasing || "linear"};`
+      : ""};
   animation-fill-mode: forwards;
 `;
