@@ -64,6 +64,10 @@ export const InfoContainer = styled.div`
   color: #2b2b2b;
   width: 100%;
   text-align: left;
+
+  & bold {
+    font-weight:800
+  }
 `;
 
 export const TitleContainer = styled.div`

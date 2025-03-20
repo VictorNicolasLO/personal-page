@@ -27,7 +27,13 @@ const Dot = styled.div`
   width: 50px;
   height: 50px;
   background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
+  /* https://smoothshadows.com/#djEsMiw1LDAuMSw0LDQsMCwjMDMwNzEyLCNmM2Y0ZjYsI2ZmZmZmZiwy */
+box-shadow: 0px 0px 0px rgba(3, 7, 18, 0.10),
+  0px 1px 1px rgba(3, 7, 18, 0.08),
+  0px 1px 1px rgba(3, 7, 18, 0.06),
+  0px 3px 3px rgba(3, 7, 18, 0.04),
+  0px 4px 4px rgba(3, 7, 18, 0.02);
+
   border-radius: 50%;
   @media ${deviceMax.mobileL} {
     opacity: 0;

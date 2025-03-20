@@ -60,7 +60,7 @@ function MainSection() {
             delay={DELAY_FACTOR * 2}
           >
             <Typography color="white" variant="h3">
-              Full stack developer
+              Software Engineer
             </Typography>
           </AnimationBottomToUp>
         </Col>

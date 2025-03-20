@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import hash from "json-stable-stringify";
 
 let idCount = 0;
 const generateId = () => {
@@ -10,7 +9,7 @@ const generateId = () => {
 const contextsDict = {};
 
 function getObserverContextFromOptions(options) {
-  const hashStr = hash(options);
+  const hashStr = JSON.stringify(options);
   if (contextsDict[hashStr]) {
     return contextsDict[hashStr];
   } else {

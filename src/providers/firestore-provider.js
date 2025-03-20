@@ -1,6 +1,7 @@
 import { makeProvider } from "react-provider-maker";
-import firebase from "../firebase";
-const db = firebase.firestore();
+import {firestore} from "../firebase";
+const db = firestore;
+
 db.settings({
   timestampsInSnapshots: true,
 });
